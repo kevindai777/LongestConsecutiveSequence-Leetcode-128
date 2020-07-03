@@ -17,8 +17,9 @@ for (let num of nums) {
 let result = 0
 
 set.forEach(num => {
-    //Find the start of the consecutive streak by finding the lowest value
-    //In this case, we want to start at '1' to get the longest streak
+    //Make sure the streak doesn't have a previous sequence
+    //If the set has '4' but also has '3', then '4' is part 
+    //of a previous sequence
     if (!set.has(num - 1)) {
         let currentNum = num 
         let currentStreak = 1
